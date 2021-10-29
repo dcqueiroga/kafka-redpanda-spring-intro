@@ -14,10 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-public class KafkaConsumerConfig {
-
-    @Value(value = "${spring.kafka.bootstrap-servers}")
-    private String bootstrapAddress;
+public class KafkaConsumerConfig extends KafkaBaseConfig {
 
     @Bean
     public ConsumerFactory<String, String> consumerFactory() {
